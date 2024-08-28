@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Personal Financce Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Financial Tracker is a web application designed to help users manage their personal finances efficiently. By tracking income and expenses, users can gain better insights into their financial health. The application features a user-friendly interface, secure authentication, and powerful tools for sorting and analyzing financial data.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Backend Setup](#backend-setup)
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Check out the live demo of the Financial Tracker [here](https://financial-tracker-6399b.web.app).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+### User Authentication
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Sign Up**: New users can easily sign up for an account using their email and password. User authentication is securely handled through Firebase Authentication.
+- **Login**: Existing users can log in to access their personal financial data. Once logged in, users will be directed to their personal dashboard.
+- **Logout**: Users can log out of their account securely, ensuring that their financial data remains private.
 
-### `npm run build`
+### Dashboard Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Total Income, Expenses, and Net Balance**: The dashboard provides a quick summary of the user's financial health, displaying total income, total expenses, and the net balance (total income minus total expenses).
+- **Bar Graph Visualization**: A bar graph is included on the dashboard to visualize income and expenses over a specified period. This visual representation helps users quickly understand their spending and earning patterns.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Transaction Management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Add Transactions**: Users can add new transactions by specifying the amount, type (income or expense), date, and category (e.g., Groceries, Rent, Salary, Utilities, Others). A brief description can also be added for more context.
+- **Edit Transactions**: Users have the flexibility to edit existing transactions. This allows updates to the amount, type, date, category, and description if necessary.
+- **Delete Transactions**: Users can delete transactions that are no longer needed, keeping their transaction list organized and relevant.
 
-### `npm run eject`
+### Transaction List
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Comprehensive Transaction List**: Users can view a list of all their financial transactions, complete with details such as the amount, type, date, category, and description.
+- **Sorting Options**: The transaction list can be sorted by various criteria, including the date of the transaction and type (income or expense). This helps users find specific transactions more easily.
+- **Filtering Options**: Users can filter the transaction list based on categories like Groceries, Rent, Salary, Utilities, and Others. This feature helps in categorizing and analyzing spending habits effectively.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Data Security
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **User-Specific Data**: Each user's data is securely stored in Firebase Firestore, ensuring that only the authenticated user can access and manage their financial information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Responsive Design
 
-## Learn More
+- The Financial Tracker is designed to be fully responsive, providing an optimal viewing experience across different devices, including desktops, tablets, and smartphones.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Frontend**: React.js, HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js
+- **Database**: Firebase Firestore for storing user-specific transaction data
+- **Authentication**: Firebase Authentication for secure user account management
+- **Hosting**: Firebase Hosting for deploying the application
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Sinchana-A-J/financial-tracker.git
+    ```
+2. **Navigate to the project directory**:
+    ```bash
+    cd financial-tracker
+    ```
+3. **Install the dependencies**:
+    ```bash
+    npm install
+    ```
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Start the development server**:
+    ```bash
+    npm start
+    ```
+   This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Making a Progressive Web App
+2. **Run the tests**:
+    ```bash
+    npm test
+    ```
+   This launches the test runner in interactive watch mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. **Build for production**:
+    ```bash
+    npm run build
+    ```
+   This will create a production-ready build of the application in the `build` folder.
 
-### Advanced Configuration
+## Backend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Navigate to the backend directory**:
+    ```bash
+    cd backend
+    ```
+2. **Install backend dependencies**:
+    ```bash
+    npm install
+    ```
+3. **Run the backend server**:
+    ```bash
+    npm start
+    ```
 
-### Deployment
+## Assumptions & Limitations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- The application is intended for personal finance management and is designed to be intuitive for users with basic financial literacy.
+- Data security is managed using Firebase Authentication and Firestore, but additional security measures may be required for handling highly sensitive data.
+- The application focuses on common financial management scenarios; specific or advanced use cases may need further customization.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
